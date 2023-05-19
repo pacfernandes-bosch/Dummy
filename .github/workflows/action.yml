@@ -17,9 +17,10 @@ jobs:
             cat <<< ${{ vars.ENV }} > .env
             # cat <<< ${{ secrets.TIME_SECRETS }} >> .env
             cat .env >> $GITHUB_OUTPUT
-            set -a
-            . .env
-            set +a
-            envsubst < original.txt > new.txt
-            cat new.txt >> >> $GITHUB_OUTPUT
+            ls
+            # set -a
+            # . .env
+            # set +a
+            # envsubst < original.txt > new.txt
+            # cat new.txt >> >> $GITHUB_OUTPUT
             
