@@ -1,0 +1,7 @@
+[Single]
+$SINGLE
+
+[Multiple]
+$MULTIPLE
+
+[End]

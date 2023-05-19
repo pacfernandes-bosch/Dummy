@@ -1,0 +1,25 @@
+name: "Continuous Integration and Continuous Deployment QA"
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  
+
+jobs:
+  subst:
+    runs-on: ubuntu-20.04
+    environment: q
+    steps:
+      - name: Test envsubst
+        run: |
+            cat <<< ${{ vars.ENV }} > .env
+            # cat <<< ${{ secrets.TIME_SECRETS }} >> .env
+            cat .env >> $GITHUB_OUTPUT
+            set -a
+            . .env
+            set +a
+            envsubst < original.txt > new.txt
+            cat new.txt >> >> $GITHUB_OUTPUT
+            
