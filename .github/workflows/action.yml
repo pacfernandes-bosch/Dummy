@@ -1,10 +1,10 @@
-name: "Continuous Integration and Continuous Deployment QA"
+name: "Test envsubst"
 
 on:
   push:
     branches: [ "main" ]
 
-env:
+#env:
   
 
 jobs:
